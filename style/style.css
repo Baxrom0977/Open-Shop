@@ -9,6 +9,26 @@
     --salesh: 0px 0px 30px rgba(255, 255, 255, 0.459);
 }
 
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
+}
+
+.btn-outline-success:focus {
+    box-shadow: unset;
+}
+
+.btn-outline-success:active:focus {
+    box-shadow: unset;
+}
+.navbar-toggler:focus {
+    
+    box-shadow: unset;
+}
+
 
 * {
     box-sizing: border-box;
@@ -50,6 +70,10 @@ body {
     color: #FFFFFF;
 }
 
+.nav_link:hover {
+    color: #fff;
+}
+
 .input_search {
     width: 440px;
     height: 50px;
@@ -76,6 +100,11 @@ body {
     background-color: #313131;
     color: white;
 }
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color:unset;
+}
 
 .burger {
     color: black;
@@ -95,6 +124,10 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 0.05em;
+    color: var(--text);
+}
+
+.nav_bottom_link:hover {
     color: var(--text);
 }
 
@@ -137,7 +170,7 @@ body {
 }
 
 .menu {
-    background-color: black;
+    background-color:var(--text);
     width: 35px;
     height: 4px;
     position: relative;
@@ -149,10 +182,22 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--text);
     left: 0;
     top: 12px;
     transition: 0.5s;
+}
+
+.navbar-toggler:not(.collapsed) .menu::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.navbar-toggler:not(.collapsed) .menu::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.navbar-toggler:not(.collapsed) .menu {
+    background-color: var(--body);
 }
 
 .menu::before {
@@ -179,7 +224,7 @@ body {
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
-    color: #FFFFFF;
+    color:var(--text);
 }
 
 .shop_link:hover {
@@ -328,7 +373,7 @@ body {
     height: 50px;
     border: var(--border);
     color: var(--text);
-    background-color: rgb(32, 31, 31);
+    background-color: var(--body);
 }
 
 .learn:hover {
@@ -414,8 +459,8 @@ body {
 
 .buy {
     margin-top: 15px;
-    background: #313131;
-    border: 1px solid #FFFFFF;
+    background: var(--body);
+    border: var(--border);
     box-sizing: border-box;
     width: 100px;
     height: 30px;
@@ -425,11 +470,14 @@ body {
     align-items: center;
     transform: scale(0);
 }
+.buy:hover{
+color: var(--text);
+}
 
 
 
 .ps5_logo::after {
-    content: url(../img/ps5_light.png);
+    content: url(../img/ps5_drk.png);
 
 }
 
@@ -496,6 +544,7 @@ body {
     line-height: 25px;
     color: #FFFFFF;
 }
-.footer_bottom:hover{
+
+.footer_bottom:hover {
     color: white;
 }
